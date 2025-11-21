@@ -39,15 +39,14 @@ async def lifespan(app: FastAPI):
     predictor = pipeline(
         "text-classification",
         model=MODEL_REPO,
-        token= HF_TOKEN,
-        top_k = None
+        token= HF_TOKEN
         )
     yield
     
 
 app = FastAPI(
-    title="Sambodhan Urgency Classifier API",
-    description="AI model that classifies citizen grievances into municipal urgency levels with confidence scores.",
+    title="Sambodhan UrgencY Classifier API",
+    description="AI model that classifies citizen grievances into municipal Urgency levels with confidence scores.",
     version="1.0.0",
     lifespan=lifespan
 )
