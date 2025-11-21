@@ -8,15 +8,15 @@ import json
 API_URL = "http://127.0.0.1:8000/predict"   # Change if deployed elsewhere
 
 st.set_page_config(
-    page_title="Sambodhan – Department Classifier",
+    page_title="Sambodhan – Urgency Classifier",
     layout="centered"
 )
 
 
 # UI
 
-st.title("📨 Sambodhan – Department Classifier")
-st.write("Enter a grievance and the AI model will classify it to the appropriate municipal department.")
+st.title(" Sambodhan – Urgency Classifier")
+st.write("Enter a grievance and the AI model will classify it to the appropriate municipal Urgency.")
 
 # Text input
 input_text = st.text_area(
@@ -44,7 +44,7 @@ if st.button(" Classify"):
                 # for res in results:
                 #     with st.container():
                 #         st.markdown(f"""
-                #         **Department:** `{res.get('label', 'N/A')}`  
+                #         **Urgency:** `{res.get('label', 'N/A')}`  
                 #         **Confidence:** `{round(res.get('score', 0.0) * 100, 2)}%`
                 #         """)\
                     
@@ -65,4 +65,4 @@ if st.button(" Classify"):
 
 
 st.markdown("---")
-st.caption("Built with ❤️ using Streamlit and FastAPI")
+st.caption("Built with  using Streamlit and FastAPI")
