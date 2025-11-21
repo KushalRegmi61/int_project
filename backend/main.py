@@ -30,6 +30,7 @@ class ModelInput(BaseModel):
 
 
 
+
 # Global model instance
 @asynccontextmanager
 async def lifespan(app: FastAPI):
@@ -38,14 +39,15 @@ async def lifespan(app: FastAPI):
     predictor = pipeline(
         "text-classification",
         model=MODEL_REPO,
-        token= HF_TOKEN
+        token= HF_TOKEN,
+        top_k = None
         )
     yield
     
 
 app = FastAPI(
-    title="Sambodhan Department Classifier API",
-    description="AI model that classifies citizen grievances into municipal departments with confidence scores.",
+    title="Sambodhan Urgency Classifier API",
+    description="AI model that classifies citizen grievances into municipal urgency levels with confidence scores.",
     version="1.0.0",
     lifespan=lifespan
 )
