@@ -36,7 +36,7 @@ The Streamlit app will open in your browser at `http://localhost:8501`
 ## Environment Variables
 
 - `HF_TOKEN`: Your Hugging Face API token (required for model access)
-- `MODEL_REPO`: The Hugging Face model repository ID (e.g., "username/model-name")
+- `MODEL_REPO`: The Hugging Face model repository ID (`sambodhan/urgency_classifier`)
 
 ## Usage
 
